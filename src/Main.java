@@ -11,13 +11,27 @@ public class Main {
         int jogadas = 0;
 
         System.out.println("Jogo da Velha");
+        novoJogo.exibirTabuleiro();
 
     }
 }
 
 class JogoDaVelha{
 
-    String[][] tabuleiro = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
+    String[][] tabuleiro = {{"1", "2", "3"},
+                            {"4", "5", "6"},
+                            {"7", "8", "9"}};
+
+    public String exibirTabuleiro() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("  " + tabuleiro[i][j]);
+            }
+            System.out.println("\n");
+        }
+        return null;
+    }
+
 
     public void jogadas(String posicao, String jogador) {
         switch (posicao) {
